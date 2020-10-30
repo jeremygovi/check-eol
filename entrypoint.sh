@@ -40,7 +40,6 @@ done <<< "$files"
 if [ "$RESULT" -eq 0 ]
 then
     printf "${BOLD_GREEN}No files with EOL errors found.${NC}\n"
-    exit 0
-else
-    exit 1
 fi
+
+exit $RESULT
